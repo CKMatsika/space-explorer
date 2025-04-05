@@ -1,0 +1,131 @@
+// src/styles/Header.scss
+@import 'variables';
+@import 'mixins';
+
+.app-header {
+  background-color: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  transition: box-shadow 0.3s ease;
+  
+  &.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.header-content {
+  @include flex-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+}
+
+.logo {
+  @include flex-center;
+  text-decoration: none;
+  color: $text-light;
+  
+  .logo-icon {
+    margin-right: 0.5rem;
+    animation: rotate 20s linear infinite;
+    
+    svg {
+      display: block;
+    }
+  }
+  
+  .logo-text {
+    font-family: $heading-font;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, $deep-space-blue, $star-yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    .logo-text {
+      background: linear-gradient(90deg, $star-yellow, $cosmic-red);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    
+    .logo-icon {
+      animation-duration: 10s;
+    }
+  }
+}
+
+.header-actions {
+  @include flex-center;
+  gap: 1rem;
+}
+
+.header-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $text-light;
+  text-decoration: none;
+  font-family: $heading-font;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @include flex-center;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  svg {
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover svg {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive adjustments
+@include mobile {
+  .header-content {
+    padding: 0.6rem 1rem;
+  }
+  
+  .logo .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .header-button {
+    display: none;
+  }
+}

@@ -1,0 +1,146 @@
+// src/styles/Footer.scss
+@import 'variables';
+@import 'mixins';
+
+.app-footer {
+  background-color: rgba(11, 61, 145, 0.2);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: $text-light;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-section {
+  h3 {
+    font-family: $heading-font;
+    color: $star-yellow;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: $star-yellow;
+      border-radius: 2px;
+    }
+  }
+  
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  
+  a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    @include flex-center;
+    color: $text-light;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: $deep-space-blue;
+      color: $star-yellow;
+      transform: translateY(-3px);
+    }
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    color: $text-grey;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 1rem;
+    
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $cosmic-red;
+    }
+    
+    &:hover {
+      color: $star-yellow;
+      transform: translateX(3px);
+    }
+  }
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .credits {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+}
+
+// Responsive adjustments
+@include mobile {
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem 1rem;
+    gap: 2rem;
+  }
+}
+
+@include tablet {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    
+    .footer-section:first-child {
+      grid-column: span 2;
+    }
+  }
+}
