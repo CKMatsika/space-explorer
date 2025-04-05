@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/space-explorer/static/css/main.5b32d0e8.css",
+    "main.js": "/space-explorer/static/js/main.63258c8e.js",
+    "index.html": "/space-explorer/index.html",
+    "main.5b32d0e8.css.map": "/space-explorer/static/css/main.5b32d0e8.css.map",
+    "main.63258c8e.js.map": "/space-explorer/static/js/main.63258c8e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b32d0e8.css",
+    "static/js/main.63258c8e.js"
+  ]
+}

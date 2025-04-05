@@ -1,0 +1,73 @@
+// src/styles/Placeholders.scss
+@import 'variables';
+@import 'mixins';
+
+// Shared styles for placeholder components
+.sky-map-container,
+.event-calendar-container,
+.mars-rover-container,
+.space-news-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  
+  h1 {
+    font-size: 2.5rem;
+    color: $star-yellow;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  > p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: $text-grey;
+  }
+}
+
+.placeholder-content {
+  @include glass-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeholder-card {
+  max-width: 600px;
+  width: 100%;
+  
+  h2 {
+    color: $star-yellow;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    
+    li {
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      padding-left: 1.5rem;
+      
+      &:before {
+        content: '•';
+        color: $cosmic-red;
+        position: absolute;
+        left: 0;
+        top: 0.7rem;
+      }
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
