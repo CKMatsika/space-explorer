@@ -20,7 +20,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true); // Space theme default is dark
 
   return (
-    <Router basename="/WDD330/space-explorer">
+    <Router basename="/space-explorer">
       <div className={`app ${darkMode ? 'dark-mode' : 'light-mode'}`}>
         <Header />
         <Navigation />

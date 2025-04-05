@@ -2,7 +2,7 @@
     "name": "space-explorer",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://CKMatsika.github.io/WDD330/space-explorer",
+    "homepage": "https://CKMatsika.github.io/space-explorer",
     "dependencies": {
         "axios": "^1.6.7",
         "d3": "^7.8.5",
