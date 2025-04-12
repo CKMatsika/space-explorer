@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/WDD330/space-explorer/static/css/main.5b32d0e8.css",
-    "main.js": "/WDD330/space-explorer/static/js/main.183c8f54.js",
-    "index.html": "/WDD330/space-explorer/index.html",
-    "main.5b32d0e8.css.map": "/WDD330/space-explorer/static/css/main.5b32d0e8.css.map",
-    "main.183c8f54.js.map": "/WDD330/space-explorer/static/js/main.183c8f54.js.map"
+    "main.css": "/space-explorer/static/css/main.5b32d0e8.css",
+    "main.js": "/space-explorer/static/js/main.63258c8e.js",
+    "index.html": "/space-explorer/index.html",
+    "main.5b32d0e8.css.map": "/space-explorer/static/css/main.5b32d0e8.css.map",
+    "main.63258c8e.js.map": "/space-explorer/static/js/main.63258c8e.js.map"
   },
   "entrypoints": [
     "static/css/main.5b32d0e8.css",
-    "static/js/main.183c8f54.js"
+    "static/js/main.63258c8e.js"
   ]
 }
